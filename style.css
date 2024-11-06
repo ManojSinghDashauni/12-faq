@@ -1,0 +1,111 @@
+:root {
+    --color-White: hsl(0, 0%, 100%);
+    --color-Light-pink: hsl(275, 100%, 97%);
+    --color-Grayish-purple: hsl(292, 16%, 49%);
+    --color-Dark-purple: hsl(292, 42%, 14%);
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-Light-pink);
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: var(--color-White);
+    width: 57rem;
+    border-radius: 1rem;
+}
+
+.summery{
+    margin-inline: 2rem;
+}
+.collapsible {
+    background-color: var(--color-White);
+    color: var(--color-Dark-purple);
+    cursor: pointer;
+    padding: 1.8rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active,
+.collapsible:hover {
+    color: var(--color-Grayish-purple);
+}
+
+.content {
+    padding: 0 1.8rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: var(--color-White);
+    color: var(--color-Grayish-purple);
+    font-size: 1.6rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin: 3rem 3rem 0 3rem;
+font-size: 2rem;
+}
+
+.title__img {
+    height: 3rem;
+}
+
+.heading-1 {
+    margin-left: 1rem;
+    color: var(--color-Dark-purple);
+}
+
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+
+@media (max-width:375px) {
+    
+    .container{
+        width: 32rem;
+
+    }
+    body{
+        background-image: url('./assets/images/background-pattern-mobile.svg');
+    }
+    .summery{
+        margin-inline: 0.5rem;
+    }
+    .title {
+        margin: 2rem 2rem 0 2rem;
+        font-size: 2rem;
+    }
+}
